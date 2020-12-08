@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-    public float RotationSpeed = 1f;
-    public Transform Target, Player;
-    float mouseX, mouseY;
+    public float RotationSpeed = 20f;
+    public float VerticalRotationSpeed = 10f;
+    private Vector2 Rotation = new Vector2(0, 0);
+    public Transform player, target;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Locked;
         
     }
 
@@ -22,15 +21,11 @@ public class Camera : MonoBehaviour
     }
 
     void ThirdPersonCamera() {
-        mouseX += Input.GetAxis("Mouse X") * RotationSpeed;
-        mouseY += Input.GetAxis("Mouse Y") * RotationSpeed;
-        mouseY = Mathf.Clamp(mouseY, -35, 60);
-
-        //transform.LookAt(Target );
-
-        Target.rotation = Quaternion.Euler(mouseY, mouseX, 0);
-        Player.rotation = Quaternion.Euler(0, mouseX,0);
-
+        Rotation.x += -Input.GetAxis("Mouse Y") * RotationSpeed;
+        Rotation.y += Input.GetAxis("Mouse X") * RotationSpeed;
+        player.rotation = Quaternion.Euler(0, Rotation.y, 0);
+        target.rotation = Quaternion.Euler(Rotation.x, Rotation.y, 0);
+        
     }
 
 }
