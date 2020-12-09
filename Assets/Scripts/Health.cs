@@ -18,7 +18,8 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
-        if(currentHealth <= 0)
+        Debug.Log("current health = " + currentHealth);
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -26,7 +27,7 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame

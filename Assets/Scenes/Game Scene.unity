@@ -145,7 +145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40092734}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.047, z: 0.511}
+  m_LocalPosition: {x: 0, y: 1.35, z: 0.357}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 919473016}
@@ -267,7 +267,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5cd02577cad8c9740b2219808972e3ac,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 0.274
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5cd02577cad8c9740b2219808972e3ac,
         type: 3}
@@ -277,7 +277,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5cd02577cad8c9740b2219808972e3ac,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5
+      value: 0.527
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5cd02577cad8c9740b2219808972e3ac,
         type: 3}
@@ -447,8 +447,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1f098ba6bd64849adc325aaeeafb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 0
-  damage: 10
+  fireRate: 0.5
+  damage: 3
   firePoint: {fileID: 40092735}
 --- !u!4 &955569435 stripped
 Transform:
@@ -769,7 +769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - waveName: Wave 1
-    numberOfEnemies: 2
+    numberOfEnemies: 1
     typeOfEnemies:
     - {fileID: 919132148998237760}
     spawnInterval: 1

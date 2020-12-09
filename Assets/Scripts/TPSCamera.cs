@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class TPSCamera : MonoBehaviour
 {
     public float RotationSpeed = 20f;
     public float VerticalRotationSpeed = 10f;

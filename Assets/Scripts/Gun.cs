@@ -32,8 +32,8 @@ public class Gun : MonoBehaviour
     }
     void FireGun()
     {
-        Debug.DrawRay(firePoint.position, firePoint.forward * 100, Color.red, 2f);
-        Ray ray = new Ray(firePoint.position, firePoint.forward);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Debug.DrawRay(ray.origin, ray.direction * 10000f, Color.red);
 
         RaycastHit hitInfo;
         if(Physics.Raycast(ray, out hitInfo, 100))
@@ -41,6 +41,7 @@ public class Gun : MonoBehaviour
             var health = hitInfo.collider.GetComponent<Health>();
             if(health != null)
             {
+                Debug.Log("Hit " + hitInfo.collider);
                 health.TakeDamage(damage);
             }
         }

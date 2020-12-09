@@ -1160,6 +1160,7 @@ GameObject:
   - component: {fileID: 5166857188093482496}
   - component: {fileID: 5166857188093482501}
   - component: {fileID: 5166857188093482498}
+  - component: {fileID: 8205269052466601779}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Enemy
@@ -1198,7 +1199,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &5166857188093482500
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1266,9 +1267,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7de03afb89f2824faf31549303bd36b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: -8679921383154817045, guid: 5cd02577cad8c9740b2219808972e3ac, type: 3}
+  target: {fileID: 0}
   distanceThreshold: 5
   aiState: 0
+--- !u!114 &8205269052466601779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5166857188093482505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8386e7f965427479fc09ea13393838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 10
 --- !u!1 &5166857188138753286
 GameObject:
   m_ObjectHideFlags: 0
