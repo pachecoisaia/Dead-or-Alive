@@ -13,10 +13,15 @@ public class Gun : MonoBehaviour
 
     [SerializeField]
     private Transform firePoint;
+    //private ParticleSystem ps;
 
 
     private float timer;
 
+    void Start()
+    {
+        //ps = GetComponent<ParticleSystem>();
+    }
 
     void Update()
     {
@@ -25,6 +30,7 @@ public class Gun : MonoBehaviour
         {
             if (Input.GetButton("Fire1"))
             {
+                //ps.Play();
                 timer = 0f;
                 FireGun();
             }
