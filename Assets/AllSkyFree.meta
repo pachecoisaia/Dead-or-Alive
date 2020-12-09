@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Code.meta
+guid: 96c18b559f37d494b9e86a521d4551aa
+=======
 guid: 34e37192ce44ec04aab79bcb43eb7cd7
+>>>>>>> 079538a090331b840de912d24cfa518654424e1b:Assets/AllSkyFree.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
