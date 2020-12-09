@@ -1267,8 +1267,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7de03afb89f2824faf31549303bd36b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  distanceThreshold: 5
+  target: {fileID: -8679921383154817045, guid: 5cd02577cad8c9740b2219808972e3ac, type: 3}
+  distanceThreshold: 10
   aiState: 0
 --- !u!114 &8205269052466601779
 MonoBehaviour:
