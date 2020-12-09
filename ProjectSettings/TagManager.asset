@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - PlayButton
+  - AboutButton
+  - ControlsButton
+  - QuitButton
+  - BackButton
+  - Audio
   layers:
   - Default
   - TransparentFX
