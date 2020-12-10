@@ -11,6 +11,7 @@ TagManager:
   - QuitButton
   - BackButton
   - Audio
+  - Audio2
   layers:
   - Default
   - TransparentFX
