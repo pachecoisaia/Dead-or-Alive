@@ -24,4 +24,9 @@ public class About : MonoBehaviour
         Debug.Log("Back");
         SceneManager.LoadScene("UI");
     }
+
+    public void Game1()
+    {
+        SceneManager.LoadScene("Game Scene");
+    }
 }
