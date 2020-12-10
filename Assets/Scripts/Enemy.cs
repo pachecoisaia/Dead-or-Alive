@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     float lastAttackTime = 0;
     float attackCoolDown = 2;
     public Animator anim;
-    public bool isAttacking = false;
+    public bool isAttacking = true;
 
     // Start is called before the first frame update
     void Start()
@@ -44,10 +44,12 @@ public class Enemy : MonoBehaviour
                     float dist = Vector3.Distance(target.position, transform.position);
                     if (dist < distanceThreshold)
                     {
+                        isAttacking = false;
                         aiState = AIState.chasing;
                     }
                     if (dist < attackDistance)
                     {
+                        isAttacking = true;
                         Attack();
                     }
                     nm.SetDestination(transform.position);
@@ -56,10 +58,12 @@ public class Enemy : MonoBehaviour
                     dist = Vector3.Distance(target.position, transform.position);
                     if(dist > distanceThreshold)
                     {
+                        isAttacking = false;
                         aiState = AIState.idle;
                     }
                     if (dist < attackDistance)
                     {
+                        isAttacking = true;
                         Attack();
                     }
                     nm.SetDestination(target.position);
@@ -73,7 +77,7 @@ public class Enemy : MonoBehaviour
 
     void Attack()
     {
-        isAttacking = true;
+        anim.SetBool("isAttacking", isAttacking);
         player.TakeDamage(damage);
         isAttacking = false;
     }

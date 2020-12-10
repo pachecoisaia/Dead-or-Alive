@@ -8,7 +8,8 @@ public class Health : MonoBehaviour
     private int startingHealth = 10;
 
     private int currentHealth;
-    //public GameObjects[] enemys;
+    public bool isHurt, isDead;
+    public Animator anim;
 
     private void OnEnable()
     {
@@ -17,19 +18,30 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
+        isHurt = true;
+        anim.SetBool("isHurt", isHurt);
         currentHealth -= damageAmount;
+        isHurt = false;
         Debug.Log(gameObject + " current health = " + currentHealth);
         if (currentHealth <= 0)
         {
-            Die();
+            StartCoroutine(Die());
         }
     }
 
-    private void Die()
+    IEnumerator Die()
     {
+        isDead = true;
+        anim.SetBool("isDead", isDead);
+        yield return new WaitForSeconds(0.5f);
         gameObject.SetActive(false);
     }
 
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+        
+    }
     // Update is called once per frame
     void Update()
     {
