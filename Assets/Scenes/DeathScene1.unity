@@ -1516,8 +1516,6 @@ GameObject:
   - component: {fileID: 2101773357}
   - component: {fileID: 2101773356}
   - component: {fileID: 2101773353}
-  - component: {fileID: 2101773355}
-  - component: {fileID: 2101773354}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1565,32 +1563,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backButton: {fileID: 1893056919}
   audio: {fileID: 1425273522}
---- !u!114 &2101773354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101773351}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60413a9fc3a22054b9e8ca9fad30b338, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audio: {fileID: 0}
---- !u!114 &2101773355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101773351}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60413a9fc3a22054b9e8ca9fad30b338, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audio: {fileID: 0}
 --- !u!114 &2101773356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1623,7 +1595,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1600, y: 90}
+  m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

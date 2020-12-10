@@ -954,7 +954,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1600, y: 90}
+  m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -994,10 +994,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60413a9fc3a22054b9e8ca9fad30b338, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playButton: {fileID: 890134156}
-  aboutButton: {fileID: 869643618}
-  controlsButton: {fileID: 1857080267}
-  quitButton: {fileID: 1294115413}
   audio: {fileID: 2085206503}
 --- !u!1 &1294115411
 GameObject:
