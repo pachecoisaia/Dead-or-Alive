@@ -22,6 +22,6 @@ public class About : MonoBehaviour
     public void Back()
     {
         Debug.Log("Back");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("UI");
     }
 }

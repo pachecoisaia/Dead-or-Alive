@@ -569,7 +569,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 82, y: 120}
+  m_AnchoredPosition: {x: 82, y: 115}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &890684764
@@ -591,20 +591,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'CREATED BY TEAM A
+  m_text: 'Dead or Alive is a zombie survival game where the goal is to defend yourself
+    for three rounds of zombie terror, complete all three rounds and win the game!
 
 
-    ISAIA PACHECO
-
-    IVAN STUS
-
-    ISAAC PACHECO
-
-    JEREMY
-    ESPINOSA
-
-
-    VERSION 1.0
 
 
 

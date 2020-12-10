@@ -569,7 +569,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 82, y: 120}
+  m_AnchoredPosition: {x: 82, y: 152}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &890684764
@@ -591,8 +591,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'THANK YOU TO ALL GAME DEVELOPERS,GRAPHIC DESGINERS, MUSICIANS, AND ALL
-    OTHER CONTRIBUTERS LISTED IN GAME DESIGN DOCUMENTATION
+  m_text: 'Created by:
+
+
+    Isaac Pacheco
+
+    Isaia Pacheco
+
+    Ivan Stus
+
+    Jeremy
+    Espinosa
 
 
 
@@ -1204,7 +1213,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: 242}
+  m_AnchoredPosition: {x: 256, y: 242}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2054892064
