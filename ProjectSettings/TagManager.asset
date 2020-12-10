@@ -12,6 +12,7 @@ TagManager:
   - BackButton
   - Audio
   - Audio2
+  - Audio3
   layers:
   - Default
   - TransparentFX
