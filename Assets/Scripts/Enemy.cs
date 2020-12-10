@@ -14,6 +14,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] float damage = 0.1f;
     float lastAttackTime = 0;
     float attackCoolDown = 2;
+    public Animator anim;
+    public bool isAttacking = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,7 @@ public class Enemy : MonoBehaviour
         nm = GetComponent<UnityEngine.AI.NavMeshAgent>();
         StartCoroutine(Move());
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -70,6 +73,8 @@ public class Enemy : MonoBehaviour
 
     void Attack()
     {
+        isAttacking = true;
         player.TakeDamage(damage);
+        isAttacking = false;
     }
 }
