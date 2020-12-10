@@ -52,7 +52,7 @@ public class Gun : MonoBehaviour
                 o3.enabled = false;
                 indexOfSelectedGun = 0;
                 fireRate = .5f;
-                damage = 4;
+                damage = 5;
                 
 
             }
@@ -65,7 +65,7 @@ public class Gun : MonoBehaviour
                 o3.enabled = false;
                 indexOfSelectedGun = 1;
                 fireRate = .33f;
-                damage = 5;
+                damage = 7;
             }
             if (Input.GetKey(KeyCode.Alpha3)) {
                 mp5.SetActive(false);
