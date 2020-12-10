@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Gun : MonoBehaviour
 {
@@ -15,7 +16,8 @@ public class Gun : MonoBehaviour
     private Transform firePoint;
     //private ParticleSystem ps;
 
-    public GameObject mp5, ak47, m4;
+    public GameObject mp5, ak47, m4, inv1, inv2, inv3;
+    public Outline o1, o2,o3;
     private int indexOfSelectedGun = 0;
     private float timer;
 
@@ -24,6 +26,9 @@ public class Gun : MonoBehaviour
     void Start()
     {
         //ps = GetComponent<ParticleSystem>();
+        o1 = inv1.GetComponent<Outline>();
+        o2 = inv2.GetComponent<Outline>();
+        o3 = inv3.GetComponent<Outline>();
     }
 
     void Update()
@@ -42,6 +47,9 @@ public class Gun : MonoBehaviour
                 mp5.SetActive(true);
                 ak47.SetActive(false);
                 m4.SetActive(false);
+                o1.enabled = true;
+                o2.enabled = false;
+                o3.enabled = false;
                 indexOfSelectedGun = 0;
                 fireRate = .5f;
                 damage = 4;
@@ -52,6 +60,9 @@ public class Gun : MonoBehaviour
                 mp5.SetActive(false);
                 ak47.SetActive(true);
                 m4.SetActive(false);
+                o1.enabled = false;
+                o2.enabled = true;
+                o3.enabled = false;
                 indexOfSelectedGun = 1;
                 fireRate = .33f;
                 damage = 5;
@@ -60,6 +71,10 @@ public class Gun : MonoBehaviour
                 mp5.SetActive(false);
                 ak47.SetActive(false);
                 m4.SetActive(true);
+                o1.enabled = false;
+                o2.enabled = false;
+                o3.enabled = true;
+
                 indexOfSelectedGun = 2;
                 fireRate = .1f;
                 damage = 10;
