@@ -6,9 +6,14 @@ public class Enemy : MonoBehaviour
 {
     UnityEngine.AI.NavMeshAgent nm;
     public Transform target;
+    public Player player;
     public float distanceThreshold = 10f;
+    public float attackDistance = 2f;
     public enum AIState { idle, chasing};
     public AIState aiState = AIState.idle;
+    [SerializeField] float damage = 0.1f;
+    float lastAttackTime = 0;
+    float attackCoolDown = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +25,6 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        
     }
 
     // Update is called once per frame
@@ -35,9 +39,13 @@ public class Enemy : MonoBehaviour
             {
                 case AIState.idle:
                     float dist = Vector3.Distance(target.position, transform.position);
-                    if(dist < distanceThreshold)
+                    if (dist < distanceThreshold)
                     {
                         aiState = AIState.chasing;
+                    }
+                    if (dist < attackDistance)
+                    {
+                        Attack();
                     }
                     nm.SetDestination(transform.position);
                     break;
@@ -47,6 +55,10 @@ public class Enemy : MonoBehaviour
                     {
                         aiState = AIState.idle;
                     }
+                    if (dist < attackDistance)
+                    {
+                        Attack();
+                    }
                     nm.SetDestination(target.position);
                     break;
                 default:
@@ -54,5 +66,10 @@ public class Enemy : MonoBehaviour
             }
             yield return new WaitForSeconds(2);
         }
+    }
+
+    void Attack()
+    {
+        player.TakeDamage(damage);
     }
 }
