@@ -36,7 +36,7 @@ public class UI : MonoBehaviour
     public void PlayGame()
     {
         Debug.Log("Play");
-        SceneManager.LoadScene("Game Scene");
+        SceneManager.LoadScene("Game Scene 1");
     }
 
     public void About()

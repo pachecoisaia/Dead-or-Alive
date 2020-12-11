@@ -18,19 +18,17 @@ public class Spawner : MonoBehaviour
 {
     public Wave[] waves;
     public Transform[] spawnPoints;
-    //public Animator animator;
+    public Animator animator;
     //public Text waveName;
     //public Button nextLevel;
     //public Button nextButton;
-    //public int numScene;
+    //zpublic int numScene;
 
     private Wave currentWave;
     private int currentWaveIndex;
     private bool canSpawn = true;
     private float nextSpawnTime;
     private bool canAnimate = false;
-
-
    
     // Update is called once per frame
     void Update()
@@ -39,48 +37,37 @@ public class Spawner : MonoBehaviour
         SpawnWave();
         
         GameObject[] totalEnemies = GameObject.FindGameObjectsWithTag("Enemy");
-        GameObject[] totatlPlayers = GameObject.FindGameObjectsWithTag("Player");
 
+        if(totalEnemies.Length == 0 && Time.time != 0){
+            animator.SetTrigger("LevelComplete");
+            Debug.Log("Level Finished");
+            StartCoroutine(LoadNextScene());
+        }
 
-        if(totatlPlayers.Length == 0)
+    }
+
+    IEnumerator LoadNextScene()
+    {
+        yield return new WaitForSeconds(5);
+        if (SceneManager.GetActiveScene().name == "Game Scene 1")
         {
-            //animator.SetTrigger("YouLost");
-            //nextButton.gameObject.SetActive(true);
+            SceneManager.LoadScene("Game Scene 2");
         }
 
-        if(totalEnemies.Length == 0){
-            
-            if(currentWaveIndex + 1 != waves.Length)
-            {
-                if(canAnimate)
-                {
-                 //   waveName.text = waves[currentWaveIndex + 1].waveName;
-               //     animator.SetTrigger("WaveComplete");
-                    canAnimate = false;
-                }
-
-            }
-            else{
-                //animator.SetTrigger("LevelComplete");
-                //nextLevel.gameObject.SetActive(true);
-
-                //if(SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCountInBuildSettings - 1)
-                //{
-                  //  animator.SetTrigger("YouWon");
-                //}
-
-                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                Debug.Log("Level Finished");
-
-            }
+        if (SceneManager.GetActiveScene().name == "Game Scene 2")
+        {
+            SceneManager.LoadScene("Game Scene 3");
         }
-        
 
+        if (SceneManager.GetActiveScene().name == "Game Scene 3")
+        {
+            SceneManager.LoadScene("Credits");
+        }
     }
 
     void SpawnNextWave(){
         currentWaveIndex++;
-        canSpawn = true;
+        canSpawn = true; 
     }
 
     void SpawnWave(){

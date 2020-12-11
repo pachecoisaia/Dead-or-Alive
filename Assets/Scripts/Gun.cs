@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Gun : MonoBehaviour
 {
@@ -17,7 +18,8 @@ public class Gun : MonoBehaviour
     //private ParticleSystem ps;
 
     public GameObject mp5, ak47, m4, inv1, inv2, inv3;
-    public Outline o1, o2,o3;
+    private Outline o1, o2,o3;
+    public bool b1,b2, b3;
     private int indexOfSelectedGun = 0;
     private float timer;
 
@@ -43,42 +45,96 @@ public class Gun : MonoBehaviour
                 FireGun();
             }
 
-            if (Input.GetKey(KeyCode.Alpha1)) {
-                mp5.SetActive(true);
-                ak47.SetActive(false);
-                m4.SetActive(false);
-                o1.enabled = true;
-                o2.enabled = false;
-                o3.enabled = false;
-                indexOfSelectedGun = 0;
-                fireRate = .5f;
-                damage = 5;
-                
+            if (SceneManager.GetActiveScene().name == "Game Scene 1")
+            {
+                if (Input.GetKey(KeyCode.Alpha1))
+                {
+                    mp5.SetActive(b1);
+                    ak47.SetActive(b2);
+                    m4.SetActive(b3);
+                    o1.enabled = true;
+                    o2.enabled = false;
+                    o3.enabled = false;
+                    indexOfSelectedGun = 0;
+                    fireRate = .5f;
+                    damage = 5;
+                }
+            }
 
-            }
-            if (Input.GetKey(KeyCode.Alpha2)) {
-                mp5.SetActive(false);
-                ak47.SetActive(true);
-                m4.SetActive(false);
-                o1.enabled = false;
-                o2.enabled = true;
-                o3.enabled = false;
-                indexOfSelectedGun = 1;
-                fireRate = .33f;
-                damage = 7;
-            }
-            if (Input.GetKey(KeyCode.Alpha3)) {
-                mp5.SetActive(false);
-                ak47.SetActive(false);
-                m4.SetActive(true);
-                o1.enabled = false;
-                o2.enabled = false;
-                o3.enabled = true;
+            if (SceneManager.GetActiveScene().name == "Game Scene 2")
+            {
 
-                indexOfSelectedGun = 2;
-                fireRate = .1f;
-                damage = 10;
+                if (Input.GetKey(KeyCode.Alpha1))
+                {
+                    mp5.SetActive(b1);
+                    ak47.SetActive(b2);
+                    m4.SetActive(b3);
+                    o1.enabled = true;
+                    o2.enabled = false;
+                    o3.enabled = false;
+                    indexOfSelectedGun = 0;
+                    fireRate = .5f;
+                    damage = 5;
+                }
+
+                if (Input.GetKey(KeyCode.Alpha2))
+                {
+                    mp5.SetActive(b1);
+                    ak47.SetActive(b2);
+                    m4.SetActive(b3);
+                    o1.enabled = false;
+                    o2.enabled = true;
+                    o3.enabled = false;
+                    indexOfSelectedGun = 1;
+                    fireRate = .33f;
+                    damage = 7;
+                }
             }
+
+            if (SceneManager.GetActiveScene().name == "Game Scene 3")
+            {
+
+                if (Input.GetKey(KeyCode.Alpha1))
+                {
+                    mp5.SetActive(b1);
+                    ak47.SetActive(b2);
+                    m4.SetActive(b3);
+                    o1.enabled = true;
+                    o2.enabled = false;
+                    o3.enabled = false;
+                    indexOfSelectedGun = 0;
+                    fireRate = .5f;
+                    damage = 5;
+                }
+
+                if (Input.GetKey(KeyCode.Alpha2))
+                {
+                    mp5.SetActive(b1);
+                    ak47.SetActive(b2);
+                    m4.SetActive(b3);
+                    o1.enabled = false;
+                    o2.enabled = true;
+                    o3.enabled = false;
+                    indexOfSelectedGun = 1;
+                    fireRate = .33f;
+                    damage = 7;
+                }
+
+                if (Input.GetKey(KeyCode.Alpha3))
+                {
+                    mp5.SetActive(b1);
+                    ak47.SetActive(b2);
+                    m4.SetActive(b3);
+                    o1.enabled = false;
+                    o2.enabled = false;
+                    o3.enabled = true;
+
+                    indexOfSelectedGun = 2;
+                    fireRate = .1f;
+                    damage = 10;
+                }
+            }
+
         }
     }
     void FireGun()

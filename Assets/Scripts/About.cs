@@ -27,6 +27,6 @@ public class About : MonoBehaviour
 
     public void Game1()
     {
-        SceneManager.LoadScene("Game Scene");
+        SceneManager.LoadScene("Game Scene 1");
     }
 }
